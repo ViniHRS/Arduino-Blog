@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset = "UTF-8">
+        <title>Arduino: Introdução</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1 align="center" class="first">
+                Arduino: Introdução
+            </h1>
+            <h2 class="second">
+                <a href="index.html" class="Menu">Home</a>
+                <a href="Projetos.html" class="Menu">Projetos</a>
+                <a href="IDE.html" class="Menu">IDE</a>
+                <a href="Documentação.html" class="Menu">Documentação</a>
+                <a href="https://www.arduino.cc/" target="_blank" class="Menu">Arduino.cc</a>
+            </h2>
+        </header>
+
+        <div class="What-is">
+            <h3 align="justify">O que é Arduino?</h3>
+            <p align="justify">Arduino é uma placa eletrônica de prototipagem<br>
+                                no qual é possível programar o microcontrolador presente<br>
+                                na placa. O Arduino tem uma porta USB pelo qual é<br>
+                                possível conectá-lo ao computador, além da entrada USB,<br>
+                                há outros teminais pelo qual é possível conectar outros<br>
+                                dispositivos externos, como leds, motores, alto-falantes e etc.</p>
+            <p align="justify">Tendo todos esses recursos e funcionalidades, o Arduino<br>
+                                proporciona a criação e desenvolvimento de diversos<br>
+                                projetos, desde coisas mais simples até projetos mais<br>
+                                avançados, basta programá-lo e montar o circuito do seu projeto.<br>
+                                A vantagem do Arduino é o fato dele ser um projeto livre, ou seja,<br>
+                                não é patentaado, possibilitando que diversas pessoas criem e<br>
+                                comercializem seus próprios arduinos, bastando apenas ter um<br>
+                                microcontrolador da atmel (normalmente utiliza-se o atmega328p-pu).</p>
+        </div>
+
+        <div class="image">
+            <img src="Imagens/Arduino-uno.png" alt="arduino uno" width="400">
+            <p class="subtitle">Foto de um Arduino Uno, um dos modelos mais conhecidos.</p>
+        </div>
+
+        <div class="history">
+            <h3 align="center">Uma breve história</h3>
+        
+            <p align="justify">Originalmente, o Arduino foi desenvolvido na Itália, com o objetivo de 
+                                auxiliar no ensino de estudantes.
+                                Em 2005, foi desenvolvido comercialmente por Massimo Banzi
+                                e David Cuartielles. Desde então, fez grande sucesso por sua facilidade
+                                de uso e durabilidade entre estudantes, fabricantes e até mesmo artistas.
+            </p>
+            <p align="justify">Outro fator que colaborou para o sucesso do Arduino, é o fato de que
+                                todos os projetos com a placa estão disponíveis gratuitamente sob
+                                uma licença Creative Commons, possibilitando o surgimento de outras 
+                                placas com um custo menor.<br>
+                                Porém o nome Arduino está protegido, então frequentemente se encontram
+                                clones do Arduino com nomes que terminam com "ino", como exemplo temos:
+                                Boarduino, Seeeduino e Freeduino.
+            </p>
+        </div>
+
+        <div class="arduinos">
+            <h3 align="center">Tipos de Arduinos</h3>
+            <p align="justify">Existem diferentes tipos de Arduinos que podem ser usados em seus projetos,
+                                o uso de cada tipo de Arduino depende do seu projeto, das suas necessidades
+                                e dos recursos que você utilizará.
+            </p>
+            <p align="justify">Cada tipo de Arduino contém um microcontrolador diferente, com processamento
+                                diferente, tamanho diferente e número de portas diferentes. Listaremos agora, 
+                                alguns dos tipos de Arduinos mais comuns, usados e conhecidos que existem.
+            </p>
+            <ul align="center">
+                <li class="type">Arduino Uno</li>
+                    <img src="Imagens/Arduino-uno.png" alt="Arduino Uno" width="300" class="pag">
+                    <p align="justify">O Arduino Uno é um dos tipos mais conhecidos e usados, é um excelente
+                                        modelo para iniciantes usarem, pode ser alimentado pela entrada USB 
+                                        ou pela fonte externa.<br>
+                                        Trabalha com uma tensão constante de 5V, porém pode receber qualquer 
+                                        tensão entre 7V e 12V.
+                    </p>
+                    <p align="justify">Possui 14 portas digitais (todas trabalham em 5V) e 6 portas analógicas. 
+                                        Também possui portas que fornecem outras tensões, como: 3.3V, 5V, GND
+                                        (que significa "ground" ou terra, com uma tensão de 0V) e 9V.
+                    </p>
+                <li class="type">Arduino Duemilanove</li>
+                    <img src="Imagens/Arduino-duemilanove.png" alt="Arduino Duemilanove" width="300" class="pag">
+                    <p align="justify">O Arduino Duemilanove é uma versão anterior ao Arduino Uno, a diferença 
+                                        mais significativa entre eles é o ship USB usado nas placas, outra diferença 
+                                        é que o Uno pode fornecer uma corrente maior e sempre vem equipado com o 
+                                        ATmega328, já o Duemilanove pode vir com o ATmega328 ou o ATmega168, esse último
+                                        microcontrolador tem menos memória que o ATmega328.
+                    </p>
+                    <p align="justify">A questão da memória que o microcontrolador oferece depende de suas necessidades, 
+                                        caso você esteja fazendo um programa muito grande, talvez o ATmega328 seja a 
+                                        opção mais adequada, caso seus programas não sejam tão grandes, essa diferença 
+                                        de memória não será tão importante.
+                    </p>
+                <li class="type">Arduino Mega</li>
+                    <img src="Imagens/Arduino-mega.png" alt="Arduino Mega" width="300" class="pag">
+                    <p align="justify">O Arduino Mega contém mais portas de entrada e saída do que os Arduinos
+                                        comuns, com um total de 54 pinos. A placa é projetada de modo que 
+                                        permaneça compatível pino a pino com o Arduino Uno e todos os shields
+                                        de Arduino.
+                    </p>
+                    <p align="justify">Ele utiliza o processador ATmega1280, que contém mais pinos do que 
+                                        o ATmega328, e é fixo na placa, ou seja, diferentemente de placas
+                                        similares ao Arduino Uno, não pode ser substituído.
+                    </p>
+                <li class="type">Arduino Nano</li>
+                    <img src="Imagens/Arduino-nano.png" alt="Arduino Nano" width="300" class="pag">
+                    <p align="justify">O Arduino Nano é muito útil em projetos no qual você não necessita
+                                        de muitos pinos de entrada e saída e ainda tem que trabalhar com 
+                                        um espaço reduzido no seu projeto, já que é bem menor do que a 
+                                        maioria dos Arduinos.</p>
+                    <p align="justify">Já que é menor, não é compatível com os shields de Arduino.
+                                        Em contrapartida, pode ser usado como se fosse um ship, podendo encaixar
+                                        o Arduino diretamente na protoboard.
+                    </p>
+                <li class="type">Arduino Leonardo</li>
+                    <img src="Imagens/Arduino-leonardo.png" alt="Arduino Leonardo" width="300" class="pag">
+                    <p align="justify">O Arduino Leonardo é semelhante ao Arduino Uno, porém utiliza o 
+                                        microcontrolador ATmega32u4, possui 20 portas de entrada e sáida e 
+                                        tem 32Kb de memória.
+                    </p>
+                    <p align="justify">Apesar de semelhantes, uma das diferenças que podemos citar entre o 
+                                        Arduino Uno e Leonardo é o conector USB. O Arduino Leonardo tem por 
+                                        padrão a entrada micro-USB.
+                    </p>
+            </ul>
+            <p align="justify">OBS: é importante se atentar a alimentação da sua placa Arduino, pois se 
+                                alimentada com uma tensão superior a requerida, a placa pode ser danificada.
+                                É recomendado que você olhe as especificações de seu Arduino e trabalhe com a 
+                                faixa de tensão correta.
+            </p>
+        </div>
+
+        <div class="shields">
+            <h3 align="center">O que são shields?</h3>
+            <p align="justify">Os shields são placas acessórias compatíveis com o Arduino, podendo ser
+                                encaixadas em cima da placa. Existem diversos tipos de shields para 
+                                diferentes tipos de aplicações, o que torna as coisas mais fáceis, pois 
+                                você não necessitará de um ferro de solda, basta apenas empilhar os shields 
+                                um em cima do outro, se necessário.
+            </p>
+            <p align="justify">Entre os shields mais populares, podemos citar:</p>
+            <ul align="justify">
+                <li class="shType">Ethernet Shield</li>
+                <li class="shType">Motor Shield</li>
+                <li class="shType">USB Host Shield</li>
+                <li class="shType">Relays Shield</li>
+            </ul>
+        </div>
+
+        <div class="hello-world">
+            <h3 align="center">Primeiro projeto com Arduino</h3>
+            <p align="justify">Se você tem um pouco mais de contato com programação, é comum ouvir falar que, 
+                                quando você está iniciando em uma determinada linguagem, seu primeiro projeto deve ser 
+                                um "Olá Mundo", ou "Hello World". Com o Arduino, também não é diferente.
+            </p>
+            <p align="justify">Existe um programa chamado Blink (pisca-pisca) que normalmente é o 
+                                primeiro programa de todos que aprendem a mexer com Arduino, neste site, iremos 
+                                ensinar como fazer esse programa pisca-pisca. Para mais informações, abra a seção 
+                                Projetos, nela disponibilizaremos o código do programa comentado, o circuito e os 
+                                materiais necessários, além de um link com vários projetos feitos em Arduino. 
+            </p>
+        </div>
+
+        <footer>
+            <h2 class="font">Fontes:</h2>
+            <h2 class="links">Programação com Arduino: Começando com Sketches<br>
+                                Programação com Arduino II: Passos Avançados com Sketches<br>
+                                <a href="https://www.arduino.cc/">https://www.arduino.cc/</a><br>
+                                <a href="https://www.filipeflop.com/blog/arduino-leonardo/">https://www.filipeflop.com/blog/arduino-leonardo/</a></h2>
+            <h2 class="border">1</h2>
+        </footer>
+    </body>
+
+</html>
