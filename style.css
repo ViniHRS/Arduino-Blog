@@ -1,0 +1,189 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Segoe UI;
+    background-image: url("Imagens/Arduino-fundo.jpg");
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+h3 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 70px;
+}
+p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 20px;
+}
+li {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 30px;
+}
+a {
+    color: #E47128;
+    cursor: pointer;
+    border: none;
+}
+footer {
+    padding-top: 80px;
+    margin: 0px;
+}
+video {
+    padding: 80px;
+}
+.first {
+    font-size: 42px;
+    color: white;
+    background-image: url("Imagens/Cabeçalho.jpg");
+    font-weight: bold;
+    line-height: 100px;
+}
+.second {
+    line-height: 70px;
+    background-color: #04BFAD;
+}
+.Menu {
+    font-size: 30px;
+    color: white;
+    background-color: #04BFAD;
+    font-weight: bold;
+    line-height: 40px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.Menu:hover {
+    font-size: 30px;
+    color: white;
+    background-color: #00878F;
+    font-weight: bold;
+    line-height: 40px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.What-is {
+    padding: 80px;
+}
+.Project {
+    padding: 80px;
+}
+.IDE {
+    padding: 80px;
+}
+.doc {
+    padding: 80px;
+}
+.image {
+    position: absolute;
+    top: 320px;
+    left: 800px;
+}
+.pag {
+    padding-bottom: 60px;
+    padding-top: 20px;
+    /* p { padding: top right bottom left } 
+       p { padding: top right & left bottom }
+       p { padding: top & bottom right & left } */
+}
+.history {
+    padding: 80px
+}
+.arduinos {
+    padding: 80px;
+}
+.shields {
+    padding: 80px;
+}
+.hello-world {
+    padding: 80px;
+}
+.blink1 {
+    padding: 80px;
+}
+.blink2 {
+    padding: 80px;
+}
+.blink3 {
+    padding: 80px;
+}
+.blink4 {
+    padding: 80px;
+}
+.blink5 {
+    padding: 80px;
+}
+.blink6 {
+    padding: 80px;
+}
+.subtitle {
+    font-size: 14px;
+}
+.document {
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 600px;
+    left: 528px;
+    padding: 30px;
+}
+.ide {
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 560px;
+    left: 580px;
+    padding: 30px;
+}
+.font {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    line-height: 50px;
+    background-color: #04BFAD;
+    padding-left: 5px;
+}
+.links {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    line-height: 60px;
+    background-color: black;
+    padding-left: 5px;
+}
+.border {
+    font-size: 10px;
+    font-weight: 300;
+    color: white;
+    line-height: 25px;
+    background-color: #004d4f;
+    padding-left: 5px;
+}
+.type {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 20px;
+}
+.shType {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 30px;
+}
+.comp {
+    padding-bottom: 80px;
+}
+.weight {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 30px;
+}

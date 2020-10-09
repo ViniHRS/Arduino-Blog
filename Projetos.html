@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset = "UTF-8">
+        <title>Arduino: Introdução</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1 align="center" class="first">
+                Arduino: Introdução
+            </h1>
+            <h2 class="second">
+                <a href="Index.html" class="Menu">Home</a>
+                <a href="Projetos.html" class="Menu">Projetos</a>
+                <a href="IDE.html" class="Menu">IDE</a>
+                <a href="Documentação.html" class="Menu">Documentação</a>
+                <a href="https://www.arduino.cc/" target="_blank" class="Menu">Arduino.cc</a>
+            </h2>
+        </header>
+
+        <div class="Project">
+            <h3 align="center">Projetos para se fazer no Arduino</h3>
+            <p align = "justify">O Arduino abre várias possibilidades de projetos, desde carrinhos de 
+                                 controle remoto, robôs, automatização de sistemas, sensores que detectam 
+                                 calor, som, movimento e etc. As possibilidades são grandes, por isso, além
+                                 de ensinarmos a fazer seu primeiro programa, indicamos no link abaixo, alguns 
+                                 projetos disponíveis que muitas pessoas desenvolvem e disponibilizam no site 
+                                 oficial da Arduino.<br>
+                                 <a href="https://create.arduino.cc/projecthub" target="_blank">Projetos com Arduino</a>
+            </p>
+        </div>
+
+        <div class="blink1">
+            <h3 align="center">Primeiro projeto com Arduino (blink)</h3>
+            <p align="justify">Muitas pessoas ao aprenderem a programar o Arduino, desenvolvem esse programa 
+                               chamado blink, que é nada mais nada menos do que ligar um led no Arduino e fazê-lo 
+                               piscar. Esse programa seria o equivalente a um "Olá Mundo" em uma outra linguagem de 
+                               programação, já que é tão simples quanto.
+            </p>
+            <p align="justify">Mais adiante, ensinaremos a desenvolver este projeto, explicando passo a passo os 
+                               materiais necessários para desenvolver o circuito, como ligá-los, explicaremos como 
+                               funciona o código (sua lógica e cada função utilizada) e o resultado final.
+            </p>
+        </div>
+
+        <div class="blink2">
+            <h3 align="center">Materiais</h3>
+            <p align="justify">Para fazer este experimento, você irá precisar de:</p>
+            <ul align="justify">
+                <li>Arduino (faremos com o Uno)</li>
+                <li>Leds</li>
+                <li>Fios (usaremos jumpers)</li>
+                <li>Resistores de no mínimo 220 ohms</li>
+                <li>Protoboard (também conhecido como placa de prototipagem)</li>
+                <li>Cabo USB para conectar o Arduino ao computador</li>
+                <li>IDE do Arduino instalada no computador</li>
+            </ul>
+            <p align="justify">OBS: caso você não tenha como utilizar um Arduino físico, acesse o simulador 
+                                abaixo chamado Tinkercad, nele você poderá simular esse experimento com o 
+                                Arduino.<br>
+                                <a href="https://www.tinkercad.com/login" target="_blank">Tinkercad</a>
+            </p>
+        </div>
+
+        <div class="blink3">
+            <h3 align="center">Circuito</h3>
+            <p align="justify">A seguir, mostraremos o circuito que deve ser montado e o explicaremos.</p>
+            <img src="Imagens/Arduino-Circuito-1.png" alt="Arduino Blink" width="1000">
+            <p align="justify">O led usado tem 2 polaridades (positivo e negativo), o negativo (que é a perna 
+                                menor) deve ser ligada no GND (ground ou terra), o positivo (perna maior) deve 
+                                ser ligada a respectiva porta, no nosso caso é a 13 (lembrando que as portas 
+                                digitais trabalham em 5V). Porém, o led não necessita de 5V, e sim uma tensão e corrente 
+                                menor, para isso, colocaremos um resistor de 220ohms (220R em algumas representações) 
+                                no polo positivo do led para limitar a tensão e corrente (também seria possível por o 
+                                resistor no polo negativo).
+            </p>
+            <p align="justify">Também é possível ligar mais leds nas outras portas do Arduino, como na imagem 
+                                a seguir:
+            </p>
+            <img src="Imagens/Arduino-Circuito-2.png" alt="Arduino Blink" width="1000">
+            <p align="justify">Tendo o circuito pronto, iremos prosseguir a programação.</p>
+        </div>
+
+        <div class="blink4">
+            <h3 align="center">Programação</h3>
+            <p align´="justify">Neste tópico do projeto, apresentaremos primeiro o código, depois explicaremos 
+                                a sua lógica e por último as funções utilizadas.
+            </p>
+            <img src="Imagens/Blink-Sketch.png" alt="Blink Sketch" width="1200">
+            <p align="justify"><br>
+                                Primeiramente, declaramos o nosso pino 13 como sendo uma saída na função 
+                                void setup().<br>
+                                Depois, na função void loop(), informaremos que o pino 13 estará ligado, ou seja, 
+                                passando corrente, isso ocorrerá por um tempo de 2 segundos.<br>
+                                Passados esses 2 segundos, informaremos que o pino 13 estará desligado, ou seja, 
+                                não passando corrente, isso ocorrerá por um tempo de 2 segundos.<br>
+                                Após esses 2 segundos, os comandos dentro da função loop serão repetidos novamenete, 
+                                isso se repetirá infinitamente até que haja uma interrupção.
+            </p>
+            <p align="justify">Agora trataremos de explicar as funções utilizadas:</p>
+            <ul align="justify">
+                <li class="weight">void setup()</li>
+                    <p align="justify">É uma função padrão que deve ser incluída em todo programa no 
+                                        Arduino. Essa função não retorna valor algum e, diferente de 
+                                        outras funções, ela deve ser criada no código, e não chamada.
+                    </p>
+                    <p align="justify">Essa função será chamada uma única vez, ou seja, tudo o que 
+                                        estiver dentro dela acontecerá apenas uma vez dentro do seu 
+                                        programa.
+                    </p>
+                <li class="weight">void loop()</li>
+                    <p align="justify">Assim como o void setup, o void loop também é uma função que 
+                                        deve ser incluída em todos os seus sketches. Também é uma 
+                                        função que não possui retorno e é criada no sketch.
+                    </p>
+                    <p align="justify">Diferentemente da função void setup, o void loop será chamado 
+                                        repentinamente, formando assim um loop. Tudo que estiver dentro 
+                                        dessa função ocorrerá várias vezes até que haja alguma interrupção 
+                                        externa ou dentro do próprio código.
+                    </p>
+                <li class="weight">pinMode()</li>
+                    <p align="justify">Essa função diferentemente das anteriores é chamada, ou seja, já é 
+                                        uma função padrão da biblioteca do Arduino. Nela, você irá declarar 
+                                        o estado da sua porta, se é uma entrada ou saída, da seguinte forma:
+                                        <br><br>
+                                        pinMode(Número da porta, OUTPUT ou INPUT);
+                    </p>
+                    <p align="justify">Na função, você deverá colocar o número da porta, OUTPUT caso deseja 
+                                        que a porta seja uma saída e INPUT se deseja uma entrada.
+                    </p>
+                <li class="weight">digitalWrite()</li>
+                    <p align="justify">Também é uma função que deve ser chamada, ela define o estado 
+                                        lógico do pino, se está em nível alto ou baixo (HIGH ou LOW), isso 
+                                        significa passando ou não corrente. É usada da seguinte forma: 
+                                        <br><br>
+                                        digitalWrite(Número da porta, Estado lógico HIGH ou LOW);
+                    </p>
+                    <p align="justify">Note que é importante escrever as funções desse jeito em específico, 
+                                        pois o compilador não entenderá o programa caso a função esteja escrita 
+                                        diferente.<br>
+                                        Para um nível lógico alto (passando corrente), coloca-se HIGH, e para 
+                                        um nível lógico baixo (não passando corrente), coloca-se LOW.
+                    </p>
+                <li class="weight">delay()</li>
+                    <p align="justify">A função delay é responsável por um atraso no seu programa, que pode 
+                                        ser determinado da seguinte forma:<br><br>
+                                        delay(Tempo do atraso);
+                    </p>
+                    <p align="justify">Vale ressaltar que o tempo desse atraso está em milisegundos, por isso 
+                                        quando exigimos um atraso de 2 segundos colocamos no sketch 2000, pois 
+                                        a função exige o tempo em milisegundos.
+                    </p>
+            </ul>
+            <p align="justify">OBS: é importante ressaltar que, para encerrar uma função, é necessário colocar 
+                                ";" no final, exceto em void setup e void loop.
+            </p>
+        </div>
+
+        <div class="blink5">
+            <h3 align="center">Compilando o código</h3>
+            <p align="justify">A seguir, vamos mostrar todos os passos para compilar seu código.</p>
+            <img src="Imagens/Carregar-0.jpg" width="1200">
+            <p align="justify" class="comp">
+                                Para compilar seu código, primeiramente vá na barra de Ferramentas, mostrado acima.
+            </p>
+            <img src="Imagens/Carregar-1.jpg" width="1200">
+            <p align="justify" class="comp">
+                                Depois, procure a barra "Placa", e verifique se o Arduino que estiver 
+                                utilizando está selecionado, caso contrário, selecione-o.
+            </p>
+            <img src="Imagens/Carregar-2.png" width="1200">
+            <p align="justify" class="comp">
+                                No nosso caso, está selecionado o Arduino Uno, a placa que iremos utilizar.
+            </p>
+            <img src="Imagens/Carregar-3.jpg" width="1200">
+            <p align="justify" class="comp">
+                                Depois vá na barra "Porta: COM" e selecione a entrada correta, no caso 
+                                estará indicado com o nome da sua placa.
+            </p>
+            <img src="Imagens/Carregar-4.jpg" width="1200">
+            <p align="justify" class="comp">
+                                Feito tudo isso, clique em Carregar, você poderá salvar seu sketch se quiser, 
+                                após ter salvo o arquivo do sketch, ele começará a compilar.       
+            </p>
+            <img src="Imagens/Carregar-5.png" width="1200">
+            <p align="justify" class="comp">
+                                Pronto! Seu programa já foi compilado, seu Arduino começará a funcionar dado 
+                                alguns segundos.
+            </p>
+        </div>
+
+        <div class="blink6">
+            <h3 align="center">Resultado final</h3>
+            <p align="justify">Após ter montado o circuito, feito o programa e compilado para o Arduino, 
+                                o resultado final deve ficar mais ou menos assim:
+            </p>
+            <video width="1000" controls>
+                <source src="Imagens/Blink-pisca.mp4" type="video/mp4">
+            </video>
+            <p align="justify"><br>
+                                Houve uma alteração no código usado para fazer o blink, mas é 
+                                apenas algumas adições no código já mostrado.<br>
+            </p>
+            <img src="Imagens/Blink-Mod.png" alt="Blink-Sketch" width="1200">
+            <p align="justify"><br>
+                                Projeto finalizado! Se você conseguiu fazer seu blink, parabéns! Você acabou 
+                                de fazer seu primeiro programa no Arduino. Esperamos que você tenha se interessado 
+                                pelo Arduino e que você busque cada vez mais aprender sobre a placa e que se 
+                                interesse por desenvolver projetos ainda mais complexos.
+            </p>
+            <p align="justify">Como indicação de um projeto um pouco mais complexo, sugerimos que tente 
+                                fazer um semáforo, é possível fazer um apenas com as funções apresentadas, 
+                                a única diferença será a lógica aplicada.
+            </p>
+        </div>
+
+        <footer>
+            <h2 class="font">Fontes:</h2>
+            <h2 class="links">Programação com Arduino: Começando com Sketches<br>
+                                Programação com Arduino II: Passos Avançados com Sketches<br>
+                                <a href="https://www.arduino.cc/">https://www.arduino.cc/</a><br>
+                                <a href="https://www.filipeflop.com/blog/arduino-leonardo/">https://www.filipeflop.com/blog/arduino-leonardo/</a></h2>
+            <h2 class="border">1</h2>
+        </footer>
+    </body>
+
+</html>
