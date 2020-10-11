@@ -131,17 +131,11 @@ video {
 .document {
     font-weight: bold;
     font-size: 20px;
-    position: absolute;
-    top: 600px;
-    left: 528px;
     padding: 30px;
 }
 .ide {
     font-weight: bold;
     font-size: 20px;
-    position: absolute;
-    top: 560px;
-    left: 580px;
     padding: 30px;
 }
 .font {
